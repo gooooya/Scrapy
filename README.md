@@ -29,7 +29,7 @@ suumoからマンションの販売情報を入手し、今後の物件探しに
   - AWS Lambda関数およびレイヤのためのDocker Imageを作成する
 - **lambda_layer/build.bat**
   - AWS Lambda関数およびレイヤのための環境を作成する
--  **lambda_layer/debug_atach.bat**
+- **lambda_layer/debug_atach.bat**
   - 上記デバッグ用
   
 
