@@ -19,7 +19,7 @@ suumoからマンションの販売情報を入手し、今後の物件探しに
   - scrapy startprojectで自動生成されたもの
 - **Scrapy/Scrapy/scrapytest/scrapytest/spiders/my_scrapy.py**
   - spiderの処理定義およびハンドラ
-- **Scrapy/scrapytest/scrapytest/spiders/Untitled.ipynb**
+- **Scrapy/Scrapy/scrapytest/scrapytest/spiders/Untitled.ipynb**
   - 動作確認用ノートブック
 - **Terraform/**
   - リソースごとのtfファイル
