@@ -1,0 +1,6 @@
+Sourcs/
+.*
+terraform.tfstate
+terraform.tfstate.backup
+tmp
+!.gitignore
