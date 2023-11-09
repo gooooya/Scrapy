@@ -19,8 +19,8 @@ suumoからマンションの販売情報を入手し、今後の物件探しに
   - scrapy startprojectで自動生成されたもの
 - **Scrapy/Scrapy/scrapytest/scrapytest/spiders/my_scrapy.py**
   - spiderの処理定義およびハンドラ
-- **Scrapy/Scrapy/scrapytest/scrapytest/spiders/Untitled.ipynb**
-  - 動作確認用ノートブック
+- **Scrapy/Scrapy/scrapytest/scrapytest/spiders/my_scrapy.ipynb**
+  - 上記動作確認用ノートブック
 - **Terraform/**
   - リソースごとのtfファイル
 - **buckup_data/**
@@ -41,3 +41,8 @@ deploy.bat、withdraw.batが存在するディレクトリに移動してくだ�
   deploy.batを実行する。
 - 終了:
   withdraw.batを実行する。
+
+# スクレイピング対象の変更
+Scrapy/Scrapy/scrapytest/scrapytest/spiders/my_scrapy.py
+- 同フォルダのmy_scrapy.ipynbでデバックしながら上記ファイルのみ更新すればよい。
+ 
