@@ -1,7 +1,7 @@
 resource "aws_cloudwatch_event_rule" "my_scheduled_rule" {
   name                = "scraping-interval"
   description         = "Trigger Lambda on a schedule"
-  schedule_expression = "rate(1 hour)"
+  schedule_expression = "rate(7 days)"
 }
 
 resource "aws_cloudwatch_event_target" "my_lambda_target" {
