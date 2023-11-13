@@ -15,11 +15,11 @@
   - TF_VAR_bucket_name バケット名(任意)
 
 # リポジトリの構成
-- **Scrapy/**
+- **scrapy/**
   - scrapy startprojectで自動生成されたもの
-- **Scrapy/Scrapy/scrapytest/scrapytest/spiders/my_scrapy.py**
+- **scrapy/scrapytest/scrapytest/spiders/my_scrapy.py**
   - spiderの処理定義およびハンドラ
-- **Scrapy/Scrapy/scrapytest/scrapytest/spiders/my_scrapy.ipynb**
+- **scrapy/scrapytest/scrapytest/spiders/my_scrapy.ipynb**
   - 上記動作確認用ノートブック
 - **terraform/**
   - リソースごとのtfファイル
@@ -46,6 +46,6 @@ deploy.bat、withdraw.batが存在するディレクトリに移動してくだ�
 7日ごとに中古マンションの販売情報から名称,価格,面積,住所,駅情報,レイアウト,築年月,URL,取得時刻を取得し、S3に格納する。
 
 # スクレイピング対象の変更
-Scrapy/Scrapy/scrapytest/scrapytest/spiders/my_scrapy.py
-- 同フォルダのmy_scrapy.ipynbでデバックしながら上記ファイルのみ更新すればよい。
+scrapy/scrapytest/scrapytest/spiders/my_scrapy.py
+- 同フォルダのmy_scrapy.ipynbでデバックしながら上記ファイルのみ更新する。
  
