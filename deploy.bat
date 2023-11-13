@@ -18,7 +18,7 @@ cd ..
 
 
 REM Initialize Terraform
-cd Terraform
+cd terraform
 terraform init
 
 REM Apply Terraform save state

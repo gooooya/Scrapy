@@ -1,4 +1,4 @@
-Source/
+source/
 .*
 terraform.tfstate
 terraform.tfstate.backup

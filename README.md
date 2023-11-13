@@ -1,5 +1,5 @@
 # 目的
-suumoからマンションの販売情報を入手し、今後の物件探しに活用できるデータを取得すること。
+マンションの販売情報を入手し、今後の物件探しに活用できるデータを取得すること。
     
 # 構成図
 ![構成図](images/configuration_diagram.jpg)
@@ -21,7 +21,7 @@ suumoからマンションの販売情報を入手し、今後の物件探しに
   - spiderの処理定義およびハンドラ
 - **Scrapy/Scrapy/scrapytest/scrapytest/spiders/my_scrapy.ipynb**
   - 上記動作確認用ノートブック
-- **Terraform/**
+- **terraform/**
   - リソースごとのtfファイル
 - **buckup_data/**
   - S3削除時にファイルを保存するフォルダ。中身はサンプルデータ
@@ -41,6 +41,9 @@ deploy.bat、withdraw.batが存在するディレクトリに移動してくだ�
   deploy.batを実行する。
 - 終了:
   withdraw.batを実行する。
+
+# 動作内容
+7日ごとに中古マンションの販売情報から名称,価格,面積,住所,駅情報,レイアウト,築年月,URL,取得時刻を取得し、S3に格納する。
 
 # スクレイピング対象の変更
 Scrapy/Scrapy/scrapytest/scrapytest/spiders/my_scrapy.py

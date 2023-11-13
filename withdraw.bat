@@ -5,7 +5,7 @@ REM delete bucket
 aws s3 rm s3://my-scrapy-output --recursive
 
 REM destroy
-cd Terraform
+cd terraform
 terraform destroy --auto-approve
 
 cd ..
