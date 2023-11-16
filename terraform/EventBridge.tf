@@ -1,18 +1,12 @@
 resource "aws_cloudwatch_event_rule" "my_scheduled_rule" {
   name                = "scraping-interval"
-  description         = "Trigger Lambda on a schedule"
-  schedule_expression = "rate(7 days)"
+  description         = "Trigger sfn on a schedule"
+  schedule_expression = "rate(15 minutes)"
 }
 
-resource "aws_cloudwatch_event_target" "my_lambda_target" {
+resource "aws_cloudwatch_event_target" "example_target" {
   rule      = aws_cloudwatch_event_rule.my_scheduled_rule.name
-  arn       = aws_lambda_function.scrapy_lambda.arn
-}
-
-resource "aws_lambda_permission" "allow_cloudwatch_to_call_my_lambda" {
-  statement_id  = "AllowExecutionFromCloudWatch"
-  action        = "lambda:InvokeFunction"
-  function_name = aws_lambda_function.scrapy_lambda.function_name
-  principal     = "events.amazonaws.com"
-  source_arn    = aws_cloudwatch_event_rule.my_scheduled_rule.arn
+  target_id = "step-functions"
+  arn       = aws_sfn_state_machine.s3_state_machine.arn
+  role_arn  = aws_iam_role.sfn_eventbridge_role.arn
 }
