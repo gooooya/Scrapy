@@ -4,6 +4,7 @@
 import os
 import boto3
 import scrapy
+import json
 from scrapy.crawler import CrawlerProcess
 from datetime import datetime
 from urllib.parse import urljoin
@@ -66,7 +67,8 @@ def lambda_handler(event='', context=''):
         s3_client.upload_fileobj(f, bucket_name, f"{timestamp_str}.csv")
 
     return {
-        "statusCode": 200
+        'statusCode': 200,
+        'body': json.dumps('Data saved to S3 successfully')
     }
 
 def main():
