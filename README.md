@@ -23,6 +23,10 @@
   - 上記動作確認用ノートブック
 - **terraform/**
   - リソースごとのtfファイル
+- **terraform/EventBridge.tf**
+  - 実行間隔を制御するtfファイル。間隔を変更する場合はこのファイルの  
+  `schedule_expression = "rate(7 days)" `  
+    を変更する。短すぎるとエラーをはくことがあるので注意
 - **buckup_data/**
   - S3削除時にファイルを保存するフォルダ。中身はサンプルデータ
 - **images/**
