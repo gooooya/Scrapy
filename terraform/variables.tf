@@ -3,8 +3,3 @@ variable "bucket_name" {
   type        = string
 }
 
-
-variable "common_tag" {
-  type        = string
-  default     = "t2.micro"
-}
