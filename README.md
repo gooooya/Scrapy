@@ -30,10 +30,6 @@ IaC
   - 実行間隔を制御するtfファイル。間隔を変更する場合はこのファイルの  
   `schedule_expression = "rate(7 days)" `  
     を変更する。短すぎる(15分以下程度)とエラーをはくことがあるので注意
-- **buckup_data/**
-  - S3削除時にファイルを保存するフォルダ。中身はサンプルデータ
-- **images/**
-  - 構成図など  
 
 Lambda関数のコード
 - **lambda_layer/**
@@ -43,6 +39,11 @@ Lambda関数のコード
 - **lambda_layer/debug_atach.bat**
   - 上記デバッグ用
   
+その他
+- **buckup_data/**
+  - S3削除時にファイルを保存するフォルダ。中身はサンプルデータ
+- **images/**
+  - 構成図など  
 
 # 動作方法
 deploy.bat、withdraw.batが存在するディレクトリに移動してください
