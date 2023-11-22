@@ -15,22 +15,27 @@
   - TF_VAR_bucket_name バケット名(任意)
 
 # リポジトリの構成
+スクレイピング
 - **scrapy/**
   - scrapy startprojectで自動生成されたもの
 - **scrapy/scrapytest/scrapytest/spiders/my_scrapy.py**
   - spiderの処理定義およびハンドラ
 - **scrapy/scrapytest/scrapytest/spiders/my_scrapy.ipynb**
-  - 上記動作確認用ノートブック
+  - 上記動作確認用ノートブック  
+
+IaC
 - **terraform/**
   - リソースごとのtfファイル
 - **terraform/EventBridge.tf**
   - 実行間隔を制御するtfファイル。間隔を変更する場合はこのファイルの  
   `schedule_expression = "rate(7 days)" `  
-    を変更する。短すぎるとエラーをはくことがあるので注意
+    を変更する。短すぎる(15分以下程度)とエラーをはくことがあるので注意
 - **buckup_data/**
   - S3削除時にファイルを保存するフォルダ。中身はサンプルデータ
 - **images/**
-  - 構成図など
+  - 構成図など  
+
+Lambda関数のコード
 - **lambda_layer/**
   - AWS Lambda関数およびレイヤのためのDocker Imageを作成する
 - **lambda_layer/build.bat**
